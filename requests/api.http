@@ -1,0 +1,6 @@
+POST http://localhost:5000/api/url/shorten
+Content-Type: application/json
+
+{
+  "longUrl": "https://www.amazon.com/iBayam-Scissors-Dishwasher-Multipurpose-Stainless/dp/B08FLKHG8J/ref=gbps_img_m-9_475e_8f1545f9?smid=A3IZ8QKHEGDVPN&pf_rd_p=5d86def2-ec10-4364-9008-8fbccf30475e&pf_rd_s=merchandised-search-9&pf_rd_t=101&pf_rd_i=15529609011&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=JEEJ3GG1BZEAFCHS9YNB"
+}
