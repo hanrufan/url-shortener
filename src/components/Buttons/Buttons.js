@@ -1,9 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
-import Button from '@material-ui/core/Button';
-import Icon from '@material-ui/core/Icon';
+import { IconButton, Button, Icon } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     btn: {
@@ -26,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
 const Buttons = ({text, icon, color, type}) => {
     const iconContent = <Icon>{icon}</Icon>;
     const classes = useStyles();
-
     
     return (
         <>
@@ -52,7 +49,10 @@ const Buttons = ({text, icon, color, type}) => {
 }
 
 Buttons.propTypes = {
-
+    text: string, 
+    icon: string, 
+    color: string, 
+    type: string
 }
 
 export default Buttons

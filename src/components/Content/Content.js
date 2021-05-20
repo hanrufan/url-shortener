@@ -64,7 +64,7 @@ const Content = () => {
     const classes = useStyles();
     const { longUrl, dispatch } = useUrlShortenerContext();
     const [typeVal, setTypeVal] = useState(longUrl);
-    const [resVal, setResVal ] = useState('');  
+    const [resVal, setResVal] = useState('');  
     const [copied, setCopied] = useState(false);
 
     const handleChange = e => {
@@ -97,17 +97,17 @@ const Content = () => {
                         label="Paste the URL to be shortened"
                         value={typeVal}
                         className={classes.textInput}
-                        variant='outlined'
+                        variant="outlined"
                         onChange={handleChange}
                     />
-                    <Buttons text='Shorten' icon='content_cut' color="primary" type="submit"/>
+                    <Buttons text="Shorten" icon="content_cut" color="primary" type="submit"/>
                 </div>
                 <div className={classes.wrapperResultContent}>
                     <TextField
                         label="Short Url"
                         value={resVal}
                         className={ classes.textInput }
-                        variant='filled'
+                        variant="filled"
                     />
                     <div className={classes.actions}>
                         {
@@ -115,7 +115,7 @@ const Content = () => {
                             <Button 
                                     variant="outlined" 
                                     disabled
-                                    className={ classes.btn }
+                                    className={`${classes.btn} ${classes.btnCopy}`}
                                     startIcon={<Icon>check</Icon>}
                                 >
                                     Copied
@@ -123,9 +123,9 @@ const Content = () => {
                             :
                             <CopyToClipboard text={resVal} onCopy={() => setCopied(!copied)}>
                                 <Button 
-                                    variant='contained' 
-                                    color='secondary'
-                                    type='button'
+                                    variant="contained"
+                                    color="secondary"
+                                    type="button"
                                     className={`${classes.btn} ${classes.btnCopy}`}
                                     startIcon={<Icon>content_copy</Icon>}
                                 >
@@ -134,9 +134,9 @@ const Content = () => {
                             </CopyToClipboard>
                         }
                         <Button 
-                            variant='contained' 
-                            color='default'
-                            type='button'
+                            variant="contained"
+                            color="default"
+                            type="button"
                             className={ classes.btn }
                             startIcon={<Icon>clear</Icon>}
                             onClick={clearAll}
