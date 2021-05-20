@@ -6,12 +6,12 @@ In the project directory, you can run:
 
 ### `npm i`
 
-Install packages.\
+Install packages.
 
 ### `npm run dev`
 
-Execute BE api.\
+Execute BE api.
 
 ### `npm start`
 
-Run FE.\
+Run FE.
